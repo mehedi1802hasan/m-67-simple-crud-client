@@ -26,7 +26,9 @@ const User = () => {
             <Link to="/">Home</Link>
             <div >
   {
-    users.map(user => <p key={user._id} style={{backgroundColor: "yellow", border: "3px solid black"}}>{user._id}.... {user.name}---{user.email} <button onClick={()=>handleDelete(user._id)}>X</button></p>)
+    users.map(user => <p key={user._id} style={{backgroundColor: "yellow", border: "3px solid black"}}>{user._id}.... {user.name}---{user.email}
+    <Link to={`/update/${user._id}`}><button>Update</button></Link>
+     <button onClick={()=>handleDelete(user._id)}>X</button></p>)
   }
 </div>
 
@@ -35,3 +37,7 @@ const User = () => {
 };
 
 export default User;
+
+
+
+
